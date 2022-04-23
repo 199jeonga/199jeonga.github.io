@@ -1,41 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko-kr">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/index.css">
-  <title>Document</title>
-</head>
-<body>
-  <div id="wrap">
-    <div class="clock"></div>
-    <div class="logIn">
-      <form id="loginForm">
-        <input type="text" required maxlength="20" placeholder="로그인을 해주세요!" />
-        <button type="submit" value="log in">로그인</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="loginForm">
+      <form class="hidden">
+        <input type="text" placeholder="이름을 입력해 주세요!" required />
+        <input type="submit" value="Log in" />
       </form>
-      <h2 id="greeting"></h2>
+      <h2 class="hidden"></h2>
     </div>
-    <div class="toDo">
-      <form id="todoForm">
-        <input type="text" maxlength="20" placeholder="투두리스트를 입력하세요!">
-        <button>입력</button>
+    <div id="clock"></div>
+    <div id="quotes"><span></span><span></span></div>
+    <div id="todo">
+      <form>
+        <input type="text" placeholder="투두리스트를 입력해 주세요!" />
+        <input type="submit" />
       </form>
+      <ul></ul>
     </div>
-    <div class="randomBg">
-    </div>
-    <div class="geolocation">
-      <div id="weather">
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <script src="/js/clock.js"></script> 
-  <script src="/js/logIn.js"></script>
-  <script src="/js/toDo.js"></script>
-  <script src="/js/randomBg.js"></script>
-  <script src="/js/geolocation.js"></script>
-</body>
+    <script src="js/login.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+  </body>
 </html>

@@ -1,18 +1,38 @@
+const todo = document.querySelector("#todo");
+const todoForm = todo.querySelector("form");
+const todoInput = todo.querySelector("input");
+const todoUl = todo.querySelector("ul");
+const KEY_TODOTITLE = "todo list";
+const localArr = [];
 
-const toDo = document.querySelector('.toDo');
-const TODOLIST = 'toto list';
-
-const todoForm = toDo.querySelector('#todoForm');
-const todoinput = toDo.querySelector('input');
-const todoButton = toDo.querySelector('button');
-
-const fnTodoInput = (e)=>{
-  e.preventDefault();
-  const li = document.createElement('li');
-  
-  toDo.append(todoinput.value);
-  
+function savedLocal(value) {
+  localStorage.setItem(KEY_TODOTITLE, value);
 }
-
-todoButton.addEventListener('submit',fnTodoInput );
-
+function fnTodoDelete(event) {
+  const eventel = event.target.parentNode;
+  localArr.filter((data) => data.id !== eventel.id);
+  console.log(localArr);
+}
+function fnTodoWrite(todoValue) {
+  const li = document.createElement("li");
+  const liText = document.createElement("span");
+  liText.innerText = todoValue;
+  const btn = document.createElement("button");
+  btn.innerText = "❌";
+  btn.addEventListener("click", fnTodoDelete);
+  li.appendChild(liText);
+  li.appendChild(btn);
+  todoUl.appendChild(li);
+}
+function fnTodoEvent(e) {
+  e.preventDefault();
+  const todoValue = todoInput.value;
+  todoInput.value = "";
+  const newTodo = {
+    id: new Date(),
+    text: todoValue,
+  };
+  // savedLocal();
+  fnTodoWrite(newTodo.text);
+}
+todoForm.addEventListener("submit", fnTodoEvent);
