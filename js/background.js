@@ -6,8 +6,10 @@ const bgImgArr = [
   "img5.jpg",
   "img6.jpg",
   "img7.jpg",
+  "img8.jpg",
+  "img9.jpg",
 ];
-const bgImg = bgImgArr[Math.floor(Math.random() * 10)];
+const bgImg = bgImgArr[Math.floor(Math.random() * 9)];
 const elImg = document.createElement("img");
 elImg.id = "bgImg";
 elImg.classList.add("hidden");
