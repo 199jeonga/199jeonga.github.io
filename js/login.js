@@ -1,4 +1,4 @@
-// alert("본 홈페이지는 상업적 이용을 하지 않는 포트폴리오용 홈페이지 입니다.");
+alert("본 홈페이지는 상업적 이용을 하지 않는 포트폴리오용 홈페이지 입니다.");
 
 const loginForm = document.querySelector("form");
 const loginInput = loginForm.querySelector("input:first-child");
