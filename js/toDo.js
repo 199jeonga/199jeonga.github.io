@@ -3,20 +3,24 @@ const todoForm = todo.querySelector("form");
 const todoInput = todo.querySelector("input");
 const todoUl = todo.querySelector("ul");
 const KEY_TODOTITLE = "todo list";
-const localArr = [];
+let localArr = [];
 
-function savedLocal(value) {
-  localStorage.setItem(KEY_TODOTITLE, value);
+function savedLocal() {
+  localStorage.setItem(KEY_TODOTITLE, JSON.stringify(localArr));
 }
-function fnTodoDelete(event) {
-  const eventel = event.target.parentNode;
-  localArr.filter((data) => data.id !== eventel.id);
-  console.log(localArr);
+function fnTodoDelete(e) {
+  const eventEl = e.target.parentElement;
+  const DelEl = localArr.filter((data) => String(data.id) !== eventEl.id);
+  eventEl.remove();
+  localArr = DelEl;
+  savedLocal(localArr);
 }
+
 function fnTodoWrite(todoValue) {
   const li = document.createElement("li");
+  li.id = todoValue.id;
   const liText = document.createElement("span");
-  liText.innerText = todoValue;
+  liText.innerText = todoValue.text;
   const btn = document.createElement("button");
   btn.innerText = "❌";
   btn.addEventListener("click", fnTodoDelete);
@@ -29,10 +33,18 @@ function fnTodoEvent(e) {
   const todoValue = todoInput.value;
   todoInput.value = "";
   const newTodo = {
-    id: new Date(),
+    id: Date.now(),
     text: todoValue,
   };
-  // savedLocal();
-  fnTodoWrite(newTodo.text);
+  localArr.push(newTodo);
+  savedLocal();
+  fnTodoWrite(newTodo);
 }
 todoForm.addEventListener("submit", fnTodoEvent);
+
+const tranceLocalData = localStorage.getItem(KEY_TODOTITLE);
+if (tranceLocalData !== null) {
+  savedLocalData = JSON.parse(tranceLocalData);
+  localArr = savedLocalData;
+  savedLocalData.forEach(fnTodoWrite);
+}
