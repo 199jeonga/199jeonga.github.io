@@ -9,7 +9,8 @@ const bgImgArr = [
 ];
 const bgImg = bgImgArr[Math.floor(Math.random() * 10)];
 const elImg = document.createElement("img");
-elImg.classList.add("bgImg");
+elImg.id = "bgImg";
+elImg.classList.add("hidden");
 elImg.src = `multi/${bgImg}`;
 
 const container = document.querySelector("#container");

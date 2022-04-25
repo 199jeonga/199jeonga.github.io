@@ -1,4 +1,4 @@
-alert("본 홈페이지는 상업적 이용을 하지 않는 포트폴리오용 홈페이지 입니다.");
+// alert("본 홈페이지는 상업적 이용을 하지 않는 포트폴리오용 홈페이지 입니다.");
 
 const loginForm = document.querySelector("form");
 const loginInput = loginForm.querySelector("input:first-child");
@@ -23,14 +23,15 @@ function onSubmitInput(e) {
 }
 const localValue = localStorage.getItem(KEY_NAME);
 const quotes = document.querySelector("#quotes");
-const bgImgEl = document.querySelector(".bgImg");
+
 if (localValue === null) {
   loginForm.classList.remove(CLASS_HIDDEN);
   loginForm.addEventListener("submit", onSubmitInput);
-  bgImgEl.classList.add("hidden");
 } else {
   loginOk(localValue);
   todo.classList.remove("hidden");
   clock.classList.remove("hidden");
   quotes.classList.remove("hidden");
+  const elBg = document.querySelector("img");
+  elBg.classList.remove("hidden");
 }
