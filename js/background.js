@@ -12,4 +12,5 @@ const elImg = document.createElement("img");
 elImg.classList.add("bgImg");
 elImg.src = `multi/${bgImg}`;
 
-document.body.appendChild(elImg);
+const container = document.querySelector("#container");
+container.appendChild(elImg);

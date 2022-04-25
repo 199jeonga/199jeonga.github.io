@@ -18,7 +18,11 @@ const quotesData = [
   { name: "Kayla Bransdon", text: "Bryn Mawr College" },
   { name: "Freda Beretta", text: "Eureka College" },
 ];
-const landomNum = Math.floor(Math.random() * quotesData.length);
 
-quotesName.innerText = quotesData[landomNum].name;
-quotesText.innerText = quotesData[landomNum].text;
+function fnRandom() {
+  const landomNum = Math.floor(Math.random() * quotesData.length);
+  quotesName.innerText = quotesData[landomNum].name;
+  quotesText.innerText = quotesData[landomNum].text;
+}
+fnRandom();
+setInterval(fnRandom, 3000);

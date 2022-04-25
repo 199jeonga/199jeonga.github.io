@@ -22,7 +22,7 @@ function fnTodoWrite(todoValue) {
   const liText = document.createElement("span");
   liText.innerText = todoValue.text;
   const btn = document.createElement("button");
-  btn.innerText = "❌";
+  btn.innerText = "delete";
   btn.addEventListener("click", fnTodoDelete);
   li.appendChild(liText);
   li.appendChild(btn);

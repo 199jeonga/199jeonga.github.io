@@ -1,3 +1,210 @@
+@font-face {
+  font-family: "IM_Hyemin-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IM_Hyemin-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .hidden {
   display: none;
 }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #fbf8f1;
+}
+
+#container {
+  width: 800px;
+  height: auto;
+  margin: auto;
+}
+#container::after {
+  width: 100%;
+  height: auto;
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#loginForm {
+  width: 800px;
+  height: auto;
+  margin: auto;
+}
+#loginForm form {
+  width: 100%;
+  height: 100%;
+  margin-top: 400px;
+}
+#loginForm input:first-child {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #e9dac1;
+  border-radius: 5px;
+  padding-left: 20px;
+  font-family: "IM_Hyemin-Bold";
+}
+#loginForm input:first-child::placeholder {
+  font-size: 20px;
+  line-height: 32px;
+  color: #e9dac1;
+  font-family: "IM_Hyemin-Bold";
+}
+#loginForm input:first-child:focus {
+  outline: 2px solid #54bab9;
+}
+#loginForm input:last-child {
+  width: 300px;
+  height: 32px;
+  margin-left: 250px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #54bab9;
+  color: #fbf8f1;
+}
+#loginForm input:last-child:hover {
+  background-color: #e9dac1;
+  color: #333;
+}
+#loginForm h2 {
+  width: 100%;
+  height: auto;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 200px;
+  font-family: "IM_Hyemin-Bold";
+}
+
+#clock {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  font-weight: 700;
+  color: #54bab9;
+  font-family: "IM_Hyemin-Bold";
+}
+#clock:hover {
+  border-bottom: 2px solid #54bab9;
+}
+
+#quotes {
+  width: 800px;
+  height: 100%;
+  margin: auto;
+  border-bottom: 2px solid #54bab9;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#quotes span:first-child {
+  width: auto;
+  height: auto;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "LeferiPoint-WhiteObliqueA";
+}
+#quotes span:last-child {
+  width: auto;
+  height: auto;
+  font-size: 16px;
+  margin-left: 10px;
+  font-family: "LeferiPoint-WhiteObliqueA";
+  color: #54bab9;
+}
+
+#todo {
+  float: left;
+  width: 400px;
+  height: auto;
+  background-color: #f7ecde;
+  border-radius: 5px;
+  padding: 10px;
+}
+#todo form {
+  width: 100%;
+  height: 100%;
+}
+#todo input:first-child {
+  width: 80%;
+  height: 30px;
+  border: 1px solid #e9dac1;
+  border-radius: 5px;
+}
+#todo input:first-child::placeholder {
+  font-size: 16px;
+  line-height: 30px;
+  font-family: "IM_Hyemin-Bold";
+}
+#todo input:first-child:focus {
+  outline: 2px solid #54bab9;
+}
+#todo input:last-child {
+  width: 18%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #54bab9;
+  color: #fbf8f1;
+}
+#todo input:last-child:hover {
+  background-color: #e9dac1;
+  color: #333;
+}
+#todo ul {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+#todo ul li {
+  width: 100%;
+  height: auto;
+  padding: 6px;
+  padding-left: 10px;
+}
+#todo ul li span {
+  width: auto;
+  height: auto;
+  font-size: 16px;
+  font-family: "IM_Hyemin-Regular";
+}
+#todo ul li button {
+  width: auto;
+  height: auto;
+  margin-left: 10px;
+  padding: 4px;
+  color: #54bab9;
+  font-size: 14px;
+}
+#todo ul li button:hover {
+  background-color: #e9dac1;
+  border-radius: 5px;
+}
+#todo ul li button:focus {
+  background-color: #54bab9;
+  color: #fbf8f1;
+  border-radius: 5px;
+}
+
+.bgImg {
+  float: right;
+  width: 380px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=index.css.map */

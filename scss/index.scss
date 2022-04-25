@@ -1,0 +1,214 @@
+//font
+@font-face {
+  font-family: "IM_Hyemin-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IM_Hyemin-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// var
+$color_gray: #333;
+$color_bg: #fbf8f1;
+$color_point1: #f7ecde;
+$color_point2: #e9dac1;
+$color_point3: #54bab9;
+
+//code
+.hidden {
+  display: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: $color_bg;
+}
+#container {
+  width: 800px;
+  height: auto;
+  margin: auto;
+  &::after {
+    width: 100%;
+    height: auto;
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+#loginForm {
+  width: 800px;
+  height: auto;
+  margin: auto;
+  form {
+    width: 100%;
+    height: 100%;
+    margin-top: 400px;
+  }
+  & input:first-child {
+    width: 100%;
+    height: 32px;
+    border: 1px solid $color_point2;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-family: "IM_Hyemin-Bold";
+    &::placeholder {
+      font-size: 20px;
+      line-height: 32px;
+      color: $color_point2;
+      font-family: "IM_Hyemin-Bold";
+    }
+    &:focus {
+      outline: 2px solid $color_point3;
+    }
+  } //first
+  & input:last-child {
+    width: 300px;
+    height: 32px;
+    margin-left: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: $color_point3;
+    color: $color_bg;
+    &:hover {
+      background-color: $color_point2;
+      color: $color_gray;
+    }
+  }
+  h2 {
+    width: 100%;
+    height: auto;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 200px;
+    font-family: "IM_Hyemin-Bold";
+  }
+} //loginForm
+#clock {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  font-weight: 700;
+  color: $color_point3;
+  font-family: "IM_Hyemin-Bold";
+  &:hover {
+    border-bottom: 2px solid $color_point3;
+  }
+}
+#quotes {
+  width: 800px;
+  height: 100%;
+  margin: auto;
+  border-bottom: 2px solid $color_point3;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  span:first-child {
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "LeferiPoint-WhiteObliqueA";
+  }
+  span:last-child {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: "LeferiPoint-WhiteObliqueA";
+    color: $color_point3;
+  }
+} //quotes
+#todo {
+  float: left;
+  width: 400px;
+  height: auto;
+  background-color: $color_point1;
+  border-radius: 5px;
+  padding: 10px;
+  form {
+    width: 100%;
+    height: 100%;
+  }
+  input:first-child {
+    width: 80%;
+    height: 30px;
+    border: 1px solid $color_point2;
+    border-radius: 5px;
+    &::placeholder {
+      font-size: 16px;
+      line-height: 30px;
+      font-family: "IM_Hyemin-Bold";
+    }
+    &:focus {
+      outline: 2px solid $color_point3;
+    }
+  } //child
+  input:last-child {
+    width: 18%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: $color_point3;
+    color: $color_bg;
+    &:hover {
+      background-color: $color_point2;
+      color: $color_gray;
+    }
+  }
+  ul {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    li {
+      width: 100%;
+      height: auto;
+      padding: 6px;
+      padding-left: 10px;
+      span {
+        width: auto;
+        height: auto;
+        font-size: 16px;
+        font-family: "IM_Hyemin-Regular";
+      }
+      button {
+        width: auto;
+        height: auto;
+        margin-left: 10px;
+        padding: 4px;
+        color: $color_point3;
+        font-size: 14px;
+        &:hover {
+          background-color: $color_point2;
+          border-radius: 5px;
+        }
+        &:focus {
+          background-color: $color_point3;
+          color: $color_bg;
+          border-radius: 5px;
+        }
+      }
+    }
+  } //ul
+} //todo
+.bgImg {
+  float: right;
+  width: 380px;
+  height: 300px;
+  border-radius: 5px;
+}
