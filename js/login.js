@@ -34,4 +34,5 @@ if (localValue === null) {
   quotes.classList.remove("hidden");
   const elBg = document.querySelector("img");
   elBg.classList.remove("hidden");
+  weather.classList.remove("hidden");
 }
