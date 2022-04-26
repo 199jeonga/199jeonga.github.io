@@ -1,5 +1,3 @@
-alert("본 홈페이지는 상업적 이용을 하지 않는 포트폴리오용 홈페이지 입니다.");
-
 const loginForm = document.querySelector("form");
 const loginInput = loginForm.querySelector("input:first-child");
 const loginButton = loginForm.querySelector("input:last-child");
@@ -15,9 +13,8 @@ function loginOk(value) {
 
 function onSubmitInput(e) {
   e.preventDefault();
-  const value = loginInput.value;
-  localStorage.setItem(KEY_NAME, value);
   loginForm.classList.add(CLASS_HIDDEN);
+  localStorage.setItem(KEY_NAME, loginInput.value);
   location.reload();
   loginOk();
 }
@@ -25,6 +22,7 @@ const localValue = localStorage.getItem(KEY_NAME);
 const quotes = document.querySelector("#quotes");
 
 if (localValue === null) {
+  alert("본 홈페이지는 상업적 이용을 하지 않는 포트폴리오용 홈페이지 입니다.");
   loginForm.classList.remove(CLASS_HIDDEN);
   loginForm.addEventListener("submit", onSubmitInput);
 } else {
